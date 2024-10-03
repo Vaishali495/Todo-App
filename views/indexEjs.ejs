@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- style.css  -->
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <!-- script  -->
+    <script src="./javaScripts/todoJs.js" defer></script>
+    <!-- icons cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1 id="heading">TODO LIST</h1>
+    </header>
+    <main> 
+        <div id="to-do-container" >
+            <!-- task container -->
+            <ul id="to-do-list"> 
+                    <% tasks.forEach(text => { %>
+                        <%- include('./taskPartial', {"text": text}) %> 
+                    <% }); %>
+                <!-- <l1 class="task-item flex">
+                    <input type="checkbox" name="complete-task" class="complete-task">
+                    <div class="task">Task 1 </div>
+                    <i class="ri-pencil-line task-edit-icon"></i>
+                    <i class="ri-delete-bin-6-line task-delete-icon"></i>
+                </l1> -->
+            </ul>
+            <div id="show-list-container">
+                <textarea name="textarea" id="new-task-area" rows="20" cols="40" placeholder="Enter any task"></textarea>
+                <button type="text" id="add-btn" class="btn">Add</button>
+                <button type="text" id="edit-btn" class="btn hidden">Edit</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

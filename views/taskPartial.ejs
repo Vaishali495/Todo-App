@@ -1,0 +1,14 @@
+<li class="task-item flex" id="<%= text.id %>" status ="<%= text.isCompleted %>">
+    <input type="checkbox" name="complete-task" class="complete-task" 
+    <% if (text.isCompleted) { %> 
+        checked 
+    <% } %> >
+    <div class="task 
+    <% if (text.isCompleted) { %> 
+        strike-through   
+    <% } %>  
+    "><%= text.task %></div> 
+    <i class="ri-pencil-line task-edit-icon"></i>
+    <i class="ri-delete-bin-6-line task-delete-icon"></i>
+</li>
+
